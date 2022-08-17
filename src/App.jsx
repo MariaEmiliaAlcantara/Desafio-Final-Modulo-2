@@ -43,15 +43,15 @@ function App() {
     ) {
       return;
     }
-    let arrayProcessed = [];
 
-    let objectGlobal = {};
+    let arrayProcessed = [];
 
     for (let city of cities) {
       let arrayCandidates = [];
       let objectProcessed = {};
       for (let item of election) {
         let objectCandidate = {};
+        let objectGlobal = {};
         for (let candidate of candidates) {
           if (item.cityId === city.id && item.candidateId === candidate.id) {
             objectGlobal.totalVoters = city.votingPopulation;
@@ -64,10 +64,12 @@ function App() {
             objectCandidate.name = candidate.name;
             objectCandidate.votes = item.votes;
             objectCandidate.id = item.id;
-            objectCandidate.percentage =
-              (item.votes / objectGlobal.totalVoters) * 100;
+            objectCandidate.percentage = Number(
+              ((item.votes / objectGlobal.presence) * 100).toFixed(2)
+            );
 
             arrayCandidates.push(objectCandidate);
+            arrayCandidates.sort((a, b) => b.votes - a.votes);
             objectProcessed.candidates = arrayCandidates;
           }
         }
@@ -80,11 +82,13 @@ function App() {
   const dataProcessed = electionsProcessed(cities, candidates, election);
   console.log(dataProcessed);
 
+  const [filter, setFilter] = useState("Gotham");
+
   return (
     <div>
       <Header />
-      <Filter dataCities={cities} />
-      <CityElection>
+      <Filter dataCities={cities} setFilter={setFilter} />
+      <CityElection dataProcessed={dataProcessed} filter={filter}>
         <Card />
       </CityElection>
     </div>
