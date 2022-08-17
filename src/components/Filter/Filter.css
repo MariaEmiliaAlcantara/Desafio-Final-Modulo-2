@@ -1,8 +1,33 @@
 .filterCities {
+  font-family: "Roboto", sans-serif;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 10px;
+  margin: 30px;
+}
+
+label {
+  color: #5B6C7E;
+  font-size: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+label p {
+text-decoration: underline;
+
+}
+
+select {
+  color: #5B6C7E;
+  padding: 2px;
+  font-size: 18px;
+  outline: none;
+  border: 1px #5B6C7E solid;
+  border-radius: 5px;
 }
 

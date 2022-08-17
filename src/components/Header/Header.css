@@ -1,10 +1,24 @@
 
+.headerWrapper {
+display: flex;
+justify-content: space-between;
+align-items: center;
+height: 80px;
+margin: 20px;
+
+}
 
 h1 {
   background-color: #145767;
-  font-family: 'Roboto Slab', serif;
-  font-size: 48px;
+  padding: 20px;
+  border-radius: 5px;
+  margin-left: 50px;
+  font-family: 'Roboto Slab', sans-serif;
+  font-size: 40px;
   font-weight: 400;
   color: white;
-  text-align: center;
+}
+
+.filter {
+  margin-right: 100px;
 }

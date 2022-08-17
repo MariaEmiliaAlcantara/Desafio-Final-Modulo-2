@@ -1,9 +1,10 @@
 import "./Header.css";
 
-const Header = () => {
+const Header = ({ children }) => {
   return (
-    <header className=" mx-auto p-4">
-      <h1 className="font-semibold text-xl">Eleições Gotham</h1>
+    <header className="headerWrapper">
+      <h1>Eleições</h1>
+      <div className="filter">{children}</div>
     </header>
   );
 };

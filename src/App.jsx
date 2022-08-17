@@ -80,16 +80,17 @@ function App() {
   }
 
   const dataProcessed = electionsProcessed(cities, candidates, election);
-  console.log(dataProcessed);
 
   const [filter, setFilter] = useState("Gotham");
 
   return (
     <div>
-      <Header />
-      <Filter dataCities={cities} setFilter={setFilter} />
+      <Header>
+        <Filter dataCities={cities} setFilter={setFilter} />
+      </Header>
+
       <CityElection dataProcessed={dataProcessed} filter={filter}>
-        <Card />
+        <Card dataProcessed={dataProcessed} filter={filter} />
       </CityElection>
     </div>
   );
