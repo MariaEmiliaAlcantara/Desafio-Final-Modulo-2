@@ -10,7 +10,7 @@
 
 label {
   color: #5B6C7E;
-  font-size: 22px;
+  font-size: 18px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -25,7 +25,7 @@ text-decoration: underline;
 select {
   color: #5B6C7E;
   padding: 2px;
-  font-size: 18px;
+  font-size: 16px;
   outline: none;
   border: 1px #5B6C7E solid;
   border-radius: 5px;

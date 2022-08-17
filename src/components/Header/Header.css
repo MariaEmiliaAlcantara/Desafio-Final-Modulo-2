@@ -4,17 +4,16 @@ display: flex;
 justify-content: space-between;
 align-items: center;
 height: 80px;
-margin: 20px;
+margin: 10px 0 0 10px;
 
 }
 
 h1 {
   background-color: #145767;
-  padding: 20px;
+  padding: 10px 20px;
   border-radius: 5px;
   margin-left: 50px;
-  font-family: 'Roboto Slab', sans-serif;
-  font-size: 40px;
+  font-size: 30px;
   font-weight: 400;
   color: white;
 }

@@ -8,10 +8,20 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: rgb(212, 207, 207);
-  margin: 50px;
-  padding: 50px 20px;
+  background-color: #E9E9E9;
+  margin: 10px 30px 10px;
+  padding: 25px 0px;
   border-radius: 10px;
+}
+
+.electionWrapper h3 {
+  color:#345574;
+  font-size: 26px;
+}
+
+.electionWrapper p {
+  color: #4a5f59;
+  font-size: 16px
 }
 
 .voters {
@@ -19,7 +29,7 @@
   flex-direction: row;
   justify-content: center;
   gap: 30px;
-  margin: 15px 0;
+  margin: 10px 0;
 }
 
 .cards {

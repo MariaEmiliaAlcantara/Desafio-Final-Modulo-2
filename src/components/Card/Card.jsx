@@ -16,12 +16,12 @@ const Card = ({ dataProcessed, filter }) => {
                   alt=""
                 />
                 <div className="cardVotes">
-                  <p>{candidate.percentage}%</p>
-                  <p>{candidate.votes} votos</p>
+                  <p>{candidate.percentage.toLocaleString("pt-br")}%</p>
+                  <p>{candidate.votes.toLocaleString("pt-br")} votos</p>
                 </div>
               </div>
               <div className="cardMain">
-                <h3>{candidate.name}</h3>
+                <h4>{candidate.name}</h4>
                 <p>
                   {cityFiltered[0].candidates[0] === candidate
                     ? "Eleito"
